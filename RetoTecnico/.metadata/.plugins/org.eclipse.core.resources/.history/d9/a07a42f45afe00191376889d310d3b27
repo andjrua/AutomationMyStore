@@ -1,0 +1,5 @@
+package com.automationpractice.mystore.tasks;
+
+public class OpenTheBrowser {
+
+}

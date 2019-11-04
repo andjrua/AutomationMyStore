@@ -1,0 +1,26 @@
+package com.automationpractice.mystore.questions;
+
+import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
+import static com.automationpractice.mystore.userinterfaces.MyStorePurchasePage.COMPLETE;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Question;
+
+public class TheOrderIs implements Question<Boolean>{
+
+	@Override
+	public Boolean answeredBy(Actor actor) {
+//		File myScreenshot = COMPLETE.getScreenshotAs(OutputType.FILE);
+//		try {
+//			FileUtils.copyFile(myScreenshot, new File("Screenshots/"+ System.currentTimeMillis() +".png"));
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		return the(COMPLETE).answeredBy(actor).containsText("Your order on My Store is complete");
+	}
+
+	public static TheOrderIs complete() {
+		return new TheOrderIs();
+	}
+}

@@ -1,0 +1,17 @@
+package com.automationpractice.mystore.userinterfaces;
+
+import org.openqa.selenium.By;
+
+import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.screenplay.targets.Target;
+import net.thucydides.core.annotations.DefaultUrl;
+
+@DefaultUrl("http://automationpractice.com/index.php")
+public class MyStoreSingInPage extends PageObject{
+	
+	public static final Target  CONTACTUS = Target.the("Contact us").located(By.id("contact-link"));
+	public static final Target  SIGNIN = Target.the("Sign in").located(By.className("header_user_info"));
+	public static final Target  SEARCH = Target.the("Search").located(By.id("search_query_top"));
+	public static final Target  SEARCHBTTN = Target.the("Search button").located(By.name("submit_search"));
+
+}

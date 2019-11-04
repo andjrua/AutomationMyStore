@@ -1,0 +1,28 @@
+package com.automationpractice.mystore.utils;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
+
+public class TakeScreenshot {
+	
+	private WebDriver driver;
+	
+	public TakeScreenshot(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public void TakeShot(String pic){
+		File myScreenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	    try {
+			FileUtils.copyFile(myScreenshot, new File("Screenshots/"+ pic + System.currentTimeMillis() +".png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

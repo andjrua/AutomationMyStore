@@ -1,0 +1,27 @@
+#Author: andjrua@gmail.com
+
+Feature: Browse and buy on My Store page
+  As a web user
+  I want to enter the My Store website
+  To buy a birthday dress
+
+  Background: Sign in on website
+  	Given I navigate to My Store page and log in with my user
+  	When I sign in with the email and-rua@hotmail.com and the password 1234567
+  	
+  Scenario: Buy a birthday dress
+    When I made a search of DRESS
+    And Select the one with the HIEST_PRICE
+    When I make the purchase
+    Then I validate the outcomes
+
+  #@tag2
+  #Scenario Outline: Title of your scenario outline
+    #Given I want to write a step with <name>
+    #When I check for the <value> in step
+    #Then I verify the <status> in step
+#
+    #Examples: 
+      #| name  | value | status  |
+      #| name1 |     5 | success |
+      #| name2 |     7 | Fail    |

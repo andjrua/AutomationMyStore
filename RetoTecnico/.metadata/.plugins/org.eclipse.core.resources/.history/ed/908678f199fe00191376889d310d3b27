@@ -1,0 +1,79 @@
+package com.automationpractice.mystore.stepdefinitions;
+
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static org.hamcrest.Matchers.is;
+
+import org.openqa.selenium.WebDriver;
+
+import com.automationpractice.mystore.questions.TheOrderIs;
+import com.automationpractice.mystore.tasks.BuyProduct;
+import com.automationpractice.mystore.tasks.LogIn;
+import com.automationpractice.mystore.tasks.OpenTheBrowser;
+import com.automationpractice.mystore.tasks.Search;
+import com.automationpractice.mystore.tasks.SelectProduct;
+import com.automationpractice.mystore.userinterfaces.MyStoreHomePage;
+import com.automationpractice.mystore.utils.PaymentType;
+import com.automationpractice.mystore.utils.SortBy;
+
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import net.thucydides.core.annotations.Managed;
+
+public class BuyDressStepDefinitions {
+	
+	@Managed(driver = "chrome")
+	WebDriver hisBrowser;
+	private Actor Megan = Actor.named("Megan");
+	private MyStoreHomePage myStore;
+	
+	@Before
+	public void setup() {
+		Megan.can(BrowseTheWeb.with(hisBrowser));
+	}
+	
+	@Given("^I navigate to My Store page and log in with my user$")
+	public void iNavigateToMyStorePageAndLogInWithMyUser() {
+		Megan.wasAbleTo(
+				OpenTheBrowser.on(myStore)
+		);
+	}
+	
+	@When("^I sign in with the email (.*) and the password (.*)$")
+	public void iSignInWithTheEmailAndThePassword(String email, String password) {
+	    Megan.wasAbleTo(
+	    		LogIn.with(email, password)
+	    );
+	}
+
+	@When("^I made a search of (.*)$")
+	public void iMadeASearchOf(String word) {
+		Megan.wasAbleTo(
+				Search.the(word)
+		);
+	}
+
+	@When("^Select the one with the (.*)$")
+	public void selectTheOneWithThe(SortBy sortBy) {
+		Megan.wasAbleTo(
+				SelectProduct.with(sortBy)
+		);
+	}
+
+	@When("^I make the purchase with (.*)$")
+	public void iMakeThePurchase(PaymentType payment) {
+		Megan.wasAbleTo(
+				BuyProduct.with(payment)
+		);
+	}
+	
+	@Then("^I validate the outcomes$")
+	public void iValidateTheOutcomes() {
+	    Megan.should(
+	    		seeThat(TheOrderIs.complete(), is(true))
+	    );
+	}
+}

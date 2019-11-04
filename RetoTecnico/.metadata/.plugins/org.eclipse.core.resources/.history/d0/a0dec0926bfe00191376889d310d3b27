@@ -1,0 +1,26 @@
+package com.automationpractice.mystore.utils;
+
+import static com.automationpractice.mystore.userinterfaces.MyStoreSearhPage.*;
+
+import net.serenitybdd.screenplay.targets.Target;
+
+public enum SortBy {
+
+	LOWEST_PRICE(PRICEASC),
+	HIEST_PRICE(),
+	NAME_A_TO_Z(),
+	NAME_Z_TO_A(),
+	IN_STOCK(),
+	LOWEST_REFERENCE(),
+	HIESTS_REFERENCE();
+	
+	private Target sortBy;
+	
+	private SortBy(Target sortBy) {
+		this.sortBy = sortBy;
+	}
+	
+	public Target getTarget() {
+		return sortBy;
+	}
+}

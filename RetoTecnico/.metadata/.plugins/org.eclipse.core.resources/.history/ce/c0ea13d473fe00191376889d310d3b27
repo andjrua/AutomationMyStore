@@ -1,0 +1,32 @@
+package com.automationpractice.mystore.tasks;
+
+import static com.automationpractice.mystore.userinterfaces.MyStoreHomePage.*;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.actions.Click;
+
+public class LogIn implements Task{
+	
+	private String password;
+	private String email;
+
+	private LogIn(String email, String password) {
+		this.email = email;
+		this.password = password;
+	}
+
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(
+				Click.on(SIGNIN),					
+				Click.on(SIGNIN)					
+		);
+	}
+
+	public static LogIn with(String email, String password) {
+		return Tasks.instrumented(LogIn.class,email,password);
+	}
+
+}

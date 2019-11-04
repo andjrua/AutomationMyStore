@@ -1,0 +1,29 @@
+package com.automationpractice.mystore.tasks;
+
+import static com.automationpractice.mystore.userinterfaces.MyStorePurchasePage.*;
+
+import com.automationpractice.mystore.utils.SortBy;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.targets.Target;
+
+public class BuyProduct implements Task{
+
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(
+				Click.on(PROCEEDBUY),				
+				Click.on(PROCEEDADD),				
+				Click.on(CHECKBOX),				
+				Click.on(PROCEEDSHIP)		
+		);
+	}
+
+	public static BuyProduct with() {
+		return Tasks.instrumented(BuyProduct.class);
+	}
+
+}

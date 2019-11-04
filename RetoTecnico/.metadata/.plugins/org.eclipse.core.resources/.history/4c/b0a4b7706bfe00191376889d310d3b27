@@ -1,0 +1,12 @@
+package com.automationpractice.mystore.utils;
+
+public enum SortBy {
+
+	LOWEST_PRICE(),
+	HIEST_PRICE(),
+	NAME_A_TO_Z(),
+	NAME_Z_TO_A(),
+	IN_STOCK(),
+	LOWEST_REFERENCE(),
+	HIESTS_REFERENCE(),
+}

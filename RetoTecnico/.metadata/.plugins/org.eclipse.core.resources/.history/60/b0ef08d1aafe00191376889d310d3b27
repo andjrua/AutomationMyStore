@@ -1,0 +1,49 @@
+package com.automationpractice.mystore.tasks;
+
+import static com.automationpractice.mystore.userinterfaces.MyStoreHomePage.*;
+import static net.serenitybdd.screenplay.Tasks.instrumented;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.function.Consumer;
+
+import org.openqa.selenium.By;
+
+import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.core.pages.WebElementFacade;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Performable;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Click;
+
+public class BrowseBy implements Task{
+
+	double price=0;
+	double value=0;
+	private List<WebElementFacade> tabs;
+	
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(
+				Click.on(DRESSES)
+		);
+		tabs = PRICES.resolveAllFor(actor);
+		tabs.forEach(
+				data ->{
+					value= Double.parseDouble(data.getTextValue().replace("$", "").replace("%", ""));
+					if(price<value) {
+						price=value;
+						System.out.println(data.getSelectedValue());
+					}
+				}
+		);
+		System.out.println(price);
+		
+	 
+	}
+
+	public static Performable the() {
+		return instrumented(BrowseBy.class);
+	}
+
+}

@@ -1,0 +1,24 @@
+#Author: andjrua@gmail.com
+
+Feature: Browse and buy on My Store page
+  As a web user
+  I want to enter the My Store website
+  To buy a birthday dress
+
+  Background: Sign in on website
+  	Given I navigate to My Store page and log in with my user
+  	When I sign in with the email and-rua@hotmail.com and the password 1234567
+  	
+  Scenario: Buy a birthday dress
+    #When I made a search of DRESS
+    #And Select the one with the HIGHEST_PRICE
+    #When I make the purchase with PAYBANK_WIRE
+    #Then I validate the outcomes
+    Then I send a mail with the proof of payment
+
+  Scenario: Browse and search a birthday dress to buy
+    When I browse the dresses tab
+    And Search the highest price dress
+    When I make the purchase with PAYBANK_WIRE
+    Then I validate the outcomes
+    Then I send a mail with the proof of payment

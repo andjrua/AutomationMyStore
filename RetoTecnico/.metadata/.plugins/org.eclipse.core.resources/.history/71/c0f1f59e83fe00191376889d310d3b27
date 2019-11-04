@@ -1,0 +1,21 @@
+package com.automationpractice.mystore.utils;
+
+import static com.automationpractice.mystore.userinterfaces.MyStorePurchasePage.*;
+
+import net.serenitybdd.screenplay.targets.Target;
+
+public enum PaymentType {
+
+	PAYBANKWIRE(PAYBANKWIRE),
+	PAYCHECK(PAYCHECK),
+	
+	private Target sortBy;
+	
+	private PaymentType(Target sortBy) {
+		this.sortBy = sortBy;
+	}
+	
+	public Target getTarget() {
+		return sortBy;
+	}
+}

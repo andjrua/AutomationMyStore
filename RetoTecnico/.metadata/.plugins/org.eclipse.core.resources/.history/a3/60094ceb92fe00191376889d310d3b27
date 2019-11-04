@@ -1,0 +1,18 @@
+package com.automationpractice.mystore.questions;
+
+import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Question;
+
+public class TheOrderIs implements Question<Boolean>{
+
+	@Override
+	public Boolean answeredBy(Actor actor) {
+		return the(AlibabaProductPage.PRODUCT_CONTACT).answeredBy(actor).isCurrentlyVisible();
+	}
+
+	public TheOrderIs complete() {
+		return new TheOrderIs();
+	}
+}

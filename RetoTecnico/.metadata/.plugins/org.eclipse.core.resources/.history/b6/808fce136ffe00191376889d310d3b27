@@ -1,0 +1,15 @@
+package com.automationpractice.mystore.userinterfaces;
+
+import org.openqa.selenium.By;
+
+import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.screenplay.targets.Target;
+import net.thucydides.core.annotations.DefaultUrl;
+
+@DefaultUrl("http://automationpractice.com/index.php")
+public class MyStorePurchasePage extends PageObject{
+	
+	public static final Target  PROCEEDBUY = Target.the("Proceed to checkout").located(By.xpath("//*[@id=\"center_column\"]/p[2]/a[1]"));
+
+
+}

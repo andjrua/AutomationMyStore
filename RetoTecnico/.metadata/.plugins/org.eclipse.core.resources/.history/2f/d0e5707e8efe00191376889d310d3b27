@@ -1,0 +1,25 @@
+package com.automationpractice.mystore.userinterfaces;
+
+import org.openqa.selenium.By;
+
+import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.screenplay.targets.Target;
+import net.thucydides.core.annotations.DefaultUrl;
+
+@DefaultUrl("http://automationpractice.com/index.php")
+public class MyStoreSearhPage extends PageObject{
+	
+	public static final Target  SORTBY = Target.the("Sort by").located(By.id("uniform-selectProductSort"));
+	public static final Target  PRICEASC = Target.the("Price:Lowest first").located(By.xpath("//*[@id=\"selectProductSort\"]/option[2]"));
+	public static final Target  PRICEDESC = Target.the("Price:Highest first").located(By.xpath("//*[@id=\"selectProductSort\"]/option[3]"));
+	public static final Target  NAMEASC = Target.the("Product Name: A to Z").located(By.xpath("//*[@id=\"selectProductSort\"]/option[4]"));
+	public static final Target  NAMEDESC = Target.the("Product Name: Z to A").located(By.xpath("//*[@id=\"selectProductSort\"]/option[5]"));
+	public static final Target  INSTOCK = Target.the("In stock").located(By.xpath("//*[@id=\"selectProductSort\"]/option[6]"));
+	public static final Target  LOWREF = Target.the("Reference:Lowest first").located(By.xpath("//*[@id=\"selectProductSort\"]/option[7]"));
+	public static final Target  HIGHREF = Target.the("Reference:Lowest first").located(By.xpath("//*[@id=\"selectProductSort\"]/option[8]"));
+	public static final Target  PROCEED = Target.the("Proceed to checkout").located(By.xpath("//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a"));
+	public static final Target  PRICES = Target.the("Prices").located(By.className("price product-price"));
+	public static final Target  FIRST = Target.the("Reference:Lowest first").located(By.xpath("//*[@id=\"center_column\"]/ul/li[1]/div/div[2]/div[2]/a[1]/span"));
+	public static final Target  button = Target.the("Reference:Lowest first").located(By.className("button ajax_add_to_cart_button btn btn-default"));
+
+}

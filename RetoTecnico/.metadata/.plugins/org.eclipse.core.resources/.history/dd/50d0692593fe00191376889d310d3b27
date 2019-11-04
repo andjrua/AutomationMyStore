@@ -1,0 +1,19 @@
+package com.automationpractice.mystore.questions;
+
+import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
+import static com.automationpractice.mystore.userinterfaces.MyStorePurchasePage.COMPLETE;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Question;
+
+public class TheOrderIs implements Question<Boolean>{
+
+	@Override
+	public Boolean answeredBy(Actor actor) {
+		return the(COMPLETE).answeredBy(actor).isCurrentlyVisible();
+	}
+
+	public static TheOrderIs complete() {
+		return new TheOrderIs();
+	}
+}

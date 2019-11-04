@@ -1,0 +1,18 @@
+package com.automationpractice.mystore.models.build;
+
+import com.automationpractice.mystore.tasks.LogIn;
+
+public class LogInBuilder {
+	
+	private String email;
+    private String password;
+    
+    public LogInBuilder(String email) {
+    	this.email = email;
+    }
+
+    public static LogIn andPassword(String email, String password){
+    	return new LogIn(email, password);
+    }
+
+}

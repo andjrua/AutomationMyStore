@@ -1,0 +1,15 @@
+package com.automationpractice.mystore.userinterfaces;
+
+import org.openqa.selenium.By;
+
+import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.screenplay.targets.Target;
+import net.thucydides.core.annotations.DefaultUrl;
+
+@DefaultUrl("http://automationpractice.com/index.php")
+public class MyStoreSearhPage extends PageObject{
+	
+	public static final Target  SORTBY = Target.the("Sort by").located(By.id("uniform-selectProductSort"));
+	public static final Target  PRICEASC = Target.the("Price:Lowest first").located(By.xpath("//*[@id=\"selectProductSort\"]/option[2]"));
+
+}

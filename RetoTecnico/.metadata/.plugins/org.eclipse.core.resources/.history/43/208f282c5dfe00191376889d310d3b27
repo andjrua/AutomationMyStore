@@ -1,0 +1,54 @@
+package com.automationpractice.mystore.stepdefinitions;
+
+import org.openqa.selenium.WebDriver;
+
+import com.automationpractice.mystore.tasks.OpenTheBrowser;
+import com.automationpractice.mystore.userinterfaces.MyStoreHomePage;
+
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import net.thucydides.core.annotations.Managed;
+
+public class BuyDressStepDefinitions {
+	
+	@Managed(driver = "chrome")
+	WebDriver hisBrowser;
+	private Actor Megan = Actor.named("Megan");
+	private MyStoreHomePage myStore;
+	
+	@Before
+	public void setup() {
+		Megan.can(BrowseTheWeb.with(hisBrowser));
+	}
+	
+	@Given("^I navigate to My Store page and log in with my user$")
+	public void iNavigateToMyStorePageAndLogInWithMyUser() {
+		Megan.wasAbleTo(
+				OpenTheBrowser.on(myStore);
+		);
+	}
+
+	@When("^I made a search of DRESSES$")
+	public void iMadeASearchOfDRESSES() {
+		Megan.wasAbleTo();
+	}
+
+	@When("^Select the one with the highest price$")
+	public void selectTheOneWithTheHighestPrice() {
+		Megan.wasAbleTo();
+	}
+
+	@When("^I make the purchase$")
+	public void iMakeThePurchase() {
+		Megan.wasAbleTo();
+	}
+
+	@Then("^I validate the outcomes$")
+	public void iValidateTheOutcomes() {
+	    Megan.attemptsTo();
+	}
+}

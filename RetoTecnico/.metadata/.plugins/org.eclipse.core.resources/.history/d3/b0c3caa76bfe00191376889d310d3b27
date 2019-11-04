@@ -1,0 +1,36 @@
+package com.automationpractice.mystore.tasks;
+
+import static com.automationpractice.mystore.userinterfaces.MyStoreSearhPage.*;
+
+import com.automationpractice.mystore.userinterfaces.MyStoreSearhPage;
+import com.automationpractice.mystore.utils.SortBy;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.targets.Target;
+
+public class SelectProduct implements Task{
+
+	private MyStoreSearhPage sortBy;
+	private Target target;
+
+	public SelectProduct(Target target) {
+		this.target = sortBy.target;
+	}
+
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(
+				Click.on(SORTBY),
+				Click.on(target),
+				Click.on(FIRST)	
+		);
+	}
+
+	public static SelectProduct with(SortBy target) {
+		return Tasks.instrumented(SelectProduct.class, target);
+	}
+
+}

@@ -1,0 +1,34 @@
+package com.automationpractice.mystore.stepdefinitions;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class BuyDressStepDefinitions {
+
+	@Given("^I navigate to My Store page and log in with my user$")
+	public void i_navigate_to_My_Store_page_and_log_in_with_my_user() {
+	    
+	}
+
+
+	@When("^I made a search of DRESSES$")
+	public void i_made_a_search_of_DRESSES() {
+	    
+	}
+
+	@When("^Select the one with the highest price$")
+	public void select_the_one_with_the_highest_price() {
+	    
+	}
+
+	@When("^I make the purchase$")
+	public void i_make_the_purchase() {
+	    
+	}
+
+	@Then("^I validate the outcomes$")
+	public void i_validate_the_outcomes() {
+	    
+	}
+}
