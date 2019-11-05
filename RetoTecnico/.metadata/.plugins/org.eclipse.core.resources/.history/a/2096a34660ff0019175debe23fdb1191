@@ -1,0 +1,49 @@
+package com.automationpractice.mystore.tasks;
+
+import static com.automationpractice.mystore.userinterfaces.MyStoreCheckInPage.*;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.SendKeys;
+
+public class Register implements Task{
+	
+	private String email;
+
+	public Register() {
+	}
+
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(				
+				Enter.theValue("Julian").into(FIRSTNAME),
+				Enter.theValue("Jimenez").into(LASTNAME),
+				Enter.theValue("kalsle@hdmls.com").into(EMAIL),
+				Enter.theValue("1234567").into(PASSWORD),
+				Click.on(BIRTHDAY)
+		);
+		SendKeys.of("25");
+		actor.attemptsTo(Click.on(BIRTHMONT));
+		SendKeys.of("january");
+		actor.attemptsTo(Click.on(BIRTHYEAR));
+		SendKeys.of("2005");
+		actor.attemptsTo(
+				Enter.theValue("Julian").into(FIRSTNAMEA),
+				Enter.theValue("Jimenez").into(LASTNAMEA),
+				Enter.theValue("cra 444 -55 # 55").into(ADDRESS),
+				Enter.theValue("Medellin").into(CITY),
+				Enter.theValue("idaho").into(STATE),
+				Enter.theValue("00000").into(ZIPCODE),
+				Enter.theValue("3654315114").into(MOBILE),
+				Enter.theValue("Home").into(ALIASADD)
+//				Click.on(REGISTER)
+		);
+	}
+
+	public static Register with() {
+		return new Register();
+	}
+
+}

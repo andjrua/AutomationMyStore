@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BuyDressRunner" project="MyStore" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.automationpractice.mystore.runners.BuyDressRunner" time="68.782">
+    <testsuite name="Feature: Browse and buy on My Store page" time="68.782">
+      <testcase name="Buy a birthday dress" classname="Browse and buy on My Store page" time="38.085"/>
+      <testcase name="Browse and search a birthday dress to buy" classname="Browse and buy on My Store page" time="30.697"/>
+    </testsuite>
+  </testsuite>
+</testrun>

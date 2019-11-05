@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.css">
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/v4-shims.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css">
+<link rel="stylesheet" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="311c4df8d597d7afc63d01e6da75ff571a09cef3d1af5d111024bc89f107bc30.html">Title Of Your Feature</a></span>
+                > <span class="truncate-60"><a
+                    href="52c304817f359c9cb65a3f24f33f06ab76b7c15ee92df0677254a07c3074067f.html">Create account </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 04-11-2019 19:11</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Title Of Your Feature </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                I want to use this template for my feature file
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span>
+                            <span class="test-case-title">
+                                <span class="error-color">Create account
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Invalid element state exception: invalid element state: Element must be user-editable in order to clear it.  (Session info: chrome=78.0.3904.70)  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.18362 x86_64) (WARNING: The server did not provide any stacktrace information)Command duration or timeout: 0 millisecondsBuild info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'System info: host: 'DESKTOP-C7L1JV7', ip: '192.168.1.50', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'Driver info: org.openqa.selenium.remote.RemoteWebDriverCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\MANIO~1\AppData\Lo...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63309}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 78.0.3904.70, webStorageEnabled: true}Session ID: 9c89cc4ace37e48d597c57b22cc95103</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.InvalidElementStateException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.automationpractice.mystore.tasks.Register.performAs(Register.java:35)<br />com.automationpractice.mystore.stepdefinitions.CreateAccountStepDefinitions.enterMyRegistrationData(CreateAccountStepDefinitions.java:34)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br />org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)<br />org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource2065160670417059704.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="f5e62e370b172e922ff467f4a4ecf897c432d1a81273404817fc74c0818a109f.png" title="Given I navigate to My Store page" width="1034"/>
+                <img src="f5e62e370b172e922ff467f4a4ecf897c432d1a81273404817fc74c0818a109f.png" title="Megan opens the My store home page" width="1034"/>
+                <img src="a88008226bb91a8df8c52c25564b5a27eab42ba347c7a2349adff1bb5eabf67d.png" title="When Enter my email to create and account" width="1034"/>
+                <img src="ede1a9f26046b624275832c853e33a257e7a22bf74fcd7d3b5142f7c0f9c59f6.png" title="Megan clicks on Sign in" width="1034"/>
+                <img src="ede1a9f26046b624275832c853e33a257e7a22bf74fcd7d3b5142f7c0f9c59f6.png" title="Megan enters 'fajkk@kfsjk.com' into Email address" width="1034"/>
+                <img src="be9dbd9d593b177af20bdf1ac2a700837251ce86db5ccfed63730d155a746ff2.png" title="Megan enters 'fajkk@kfsjk.com' into Email address" width="1034"/>
+                <img src="be9dbd9d593b177af20bdf1ac2a700837251ce86db5ccfed63730d155a746ff2.png" title="Megan clicks on Create an account" width="1034"/>
+                <img src="7ec13c85e546de54d5e6a95c7211b87eabd5ce13a410e80152aeaf8e50a38454.png" title="Megan clicks on Create an account" width="1034"/>
+                <img src="6dda73c40a28cced0fb604fb2853828f1f911c4aa2cc245e55b047d0217b3544.png" title="When Enter my registration data" width="1034"/>
+                <img src="d8e56d27b9fa593b6161987458eb334e1440d6f57104ade1cdf6545e9bc6b463.png" title="Megan enters 'Julian' into Fist Name" width="1034"/>
+                <img src="044f7144611f57646e1e993ec01a67c5090bf5f322f7ca560b7d997eaa98a8ff.png" title="Megan enters 'Julian' into Fist Name" width="1034"/>
+                <img src="94ddf3d341cec4a35bef18e0a16aaa2e1c80e5033f0ac1ebe00449a859749bc9.png" title="Megan enters 'Jimenez' into Last Name" width="1034"/>
+                <img src="e15375667b57f1cec1d719576562b8223c8483d1806d4ac837ff633cfb3ac629.png" title="Megan enters 'Jimenez' into Last Name" width="1034"/>
+                <img src="e15375667b57f1cec1d719576562b8223c8483d1806d4ac837ff633cfb3ac629.png" title="Megan enters 'kalsle@hdmls.com' into Email" width="1034"/>
+                <img src="d6ccacb6f58a7f44f94c648803fc3690bf675740cbc41b749fe173cdafbb1353.png" title="Megan enters 'kalsle@hdmls.com' into Email" width="1034"/>
+                <img src="fc2d0ae834d7cf44d638f3eabc66525417afebb6df826d857123fce826a3f6c3.png" title="Megan enters '1234567' into Password" width="1034"/>
+                <img src="3e181339e4c510ea65f519d672e97d5c66a921c08c6d1e1b1512480dbf94fe1b.png" title="Megan enters '1234567' into Password" width="1034"/>
+                <img src="3e181339e4c510ea65f519d672e97d5c66a921c08c6d1e1b1512480dbf94fe1b.png" title="Megan clicks on Day birth date" width="1034"/>
+                <img src="e47cf4149623a0a1d8d80306833e5d05e846af1acdd3aebc78b19fb76614c8aa.png" title="Megan clicks on Day birth date" width="1034"/>
+                <img src="e47cf4149623a0a1d8d80306833e5d05e846af1acdd3aebc78b19fb76614c8aa.png" title="Megan clicks on Month birth date" width="1034"/>
+                <img src="8d914bc0d4d177931ccc1d44609b5ab66eaaa36cb4993fd52af3ca8aadcea44e.png" title="Megan clicks on Month birth date" width="1034"/>
+                <img src="8d914bc0d4d177931ccc1d44609b5ab66eaaa36cb4993fd52af3ca8aadcea44e.png" title="Megan clicks on Year birth date" width="1034"/>
+                <img src="ca8ed2805963aff74d0c99997d33f7bdb62abb7c5067aece4a62f7fb91b5c5b6.png" title="Megan clicks on Year birth date" width="1034"/>
+                <img src="5268aa981a8b4ad623f3ce8f9310ee1a13d703a3b392af66cf02bcea35d968a2.png" title="Megan enters 'Julian' into Fist Name" width="1034"/>
+                <img src="261303945b834677731de991278fe213c3697a60a4d25a74bf563a39530b85cd.png" title="Megan enters 'Julian' into Fist Name" width="1034"/>
+                <img src="261303945b834677731de991278fe213c3697a60a4d25a74bf563a39530b85cd.png" title="Megan enters 'Jimenez' into Last Name" width="1034"/>
+                <img src="8a74394ec25cd8967cdc5d326dab4b572d1fc07a7de83f82e909d510ad58385e.png" title="Megan enters 'Jimenez' into Last Name" width="1034"/>
+                <img src="8a74394ec25cd8967cdc5d326dab4b572d1fc07a7de83f82e909d510ad58385e.png" title="Megan enters 'cra 444 -55 # 55' into Address" width="1034"/>
+                <img src="2b4ea2a0ad08c599e5e028e352a6f05f24d9630f833efa2cab3b0ad71562b794.png" title="Megan enters 'cra 444 -55 # 55' into Address" width="1034"/>
+                <img src="2b4ea2a0ad08c599e5e028e352a6f05f24d9630f833efa2cab3b0ad71562b794.png" title="Megan enters 'Medellin' into City" width="1034"/>
+                <img src="be84ab5664c40f9e62cf821c74cf4de3cf2e9e2dc3bbc77f97379dee8169d26a.png" title="Megan enters 'Medellin' into City" width="1034"/>
+                <img src="b311ddd9efccdcd8679869f3b4e9fdc69a23e26f729120e75e6972cb2e1b50c6.png" title="Megan enters 'idaho' into State" width="1034"/>
+                <img src="f9fcd16a462deaee37e041f7b141fa4b442a94fc836dee73dca52102f6e62601.png" title="Megan enters 'idaho' into State: <span class='error-color'>ERROR</span>" width="1034"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.0.8</span>
+</div>
+</body>
+</html>

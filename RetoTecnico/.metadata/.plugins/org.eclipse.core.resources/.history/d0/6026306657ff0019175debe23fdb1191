@@ -1,0 +1,49 @@
+package com.automationpractice.mystore.stepdefinitions;
+
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static org.hamcrest.Matchers.is;
+
+import org.openqa.selenium.WebDriver;
+
+import com.automationpractice.mystore.questions.TheOrderIs;
+import com.automationpractice.mystore.tasks.BrowseBy;
+import com.automationpractice.mystore.tasks.BuyProduct;
+import com.automationpractice.mystore.tasks.LogIn;
+import com.automationpractice.mystore.tasks.OpenTheBrowser;
+import com.automationpractice.mystore.tasks.Search;
+import com.automationpractice.mystore.tasks.SelectProduct;
+import com.automationpractice.mystore.tasks.SendAMail;
+import com.automationpractice.mystore.userinterfaces.MyStoreHomePage;
+import com.automationpractice.mystore.utils.PaymentType;
+import com.automationpractice.mystore.utils.SortBy;
+
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import net.thucydides.core.annotations.Managed;
+
+public class CreateAccountStepDefinitions {
+	
+	@Managed(driver = "chrome")
+	WebDriver hisBrowser;
+	private Actor Megan = Actor.named("Megan");
+	private MyStoreHomePage myStore;
+	
+	@Before
+	public void setup() {
+		Megan.can(BrowseTheWeb.with(hisBrowser));
+	}
+	
+	@When("^Enter my email to create and account$")
+	public void enterMyEmailToCreateAndAccount() {
+	    
+	}
+
+	@When("^Enter my registration data$")
+	public void enterMyRegistrationData() {
+	    
+	}
+}

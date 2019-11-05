@@ -1,0 +1,20 @@
+package com.automationpractice.mystore.models.build;
+
+import static net.serenitybdd.screenplay.Tasks.instrumented;
+
+import com.automationpractice.mystore.tasks.LogIn;
+
+public class SignInBuilder {
+	
+	private String email;
+
+    public SignInBuilder email(String email){
+        this.email = email;
+        return this;
+    }
+
+    public LogIn andPass(String pass){
+        return instrumented(LogIn.class,email,pass);
+    }
+
+}

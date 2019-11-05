@@ -6,7 +6,7 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
 
-@DefaultUrl("http://automationpractice.com/index.php")
+@DefaultUrl("http://automationpractice.com/index.php?controller=authentication&back=my-account")
 public class MyStoreSingInPage extends PageObject{
 	
 	public static final Target  SIGNINBUTTON = Target.the("Sign in").located(By.id("SubmitLogin"));  

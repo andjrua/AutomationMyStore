@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CreateAccount" project="MyStore" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.automationpractice.mystore.runners.CreateAccount" time="10.96">
+    <testsuite name="Feature: Title of your feature" time="10.96">
+      <testcase name="Create account" classname="Title of your feature" time="10.96">
+        <skipped>cucumber.runtime.junit.UndefinedThrowable: The step "Enter my email to create and account" is undefined&#13;
+&#13;
+cucumber.runtime.junit.UndefinedThrowable: The step "Enter my registration data" is undefined&#13;
+&#13;
+</skipped>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

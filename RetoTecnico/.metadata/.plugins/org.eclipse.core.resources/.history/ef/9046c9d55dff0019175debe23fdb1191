@@ -1,0 +1,30 @@
+package com.automationpractice.mystore.tasks;
+
+import static com.automationpractice.mystore.userinterfaces.MyStoreCheckInPage.*;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Enter;
+
+public class Register implements Task{
+	
+	private String email;
+
+	public Register(String email) {
+		this.email = email;
+	}
+
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(				
+				Enter.theValue(email).into(CREATEEMAIL),
+				Click.on(CREATENBUTTON)
+		);
+	}
+
+	public static Register withEmail(String email) {
+		return new Register(email);
+	}
+
+}

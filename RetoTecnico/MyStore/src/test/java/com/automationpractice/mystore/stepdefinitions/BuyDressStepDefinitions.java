@@ -37,7 +37,7 @@ public class BuyDressStepDefinitions {
 		Megan.can(BrowseTheWeb.with(hisBrowser));
 	}
 	
-	@Given("^I navigate to My Store page and log in with my user$")
+	@Given("^I navigate to My Store page$")
 	public void iNavigateToMyStorePageAndLogInWithMyUser() {
 		Megan.wasAbleTo(
 				OpenTheBrowser.on(myStore)
@@ -87,10 +87,10 @@ public class BuyDressStepDefinitions {
 	    );
 	}
 	
-	@Then("^I send a mail with the proof of payment$")
-	public void iSendAMailWithTheProofOfPayment() {
+	@Then("^I send a mail with the proof of payment (.*) and (.*)$")
+	public void iSendAMailWithTheProofOfPayment(String username, String password) {
 		Megan.wasAbleTo(
-				SendAMail.the()
+				SendAMail.the(username, password)
 		);
 	}
 }

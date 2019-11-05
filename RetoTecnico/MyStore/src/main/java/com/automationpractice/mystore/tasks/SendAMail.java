@@ -35,8 +35,13 @@ import net.serenitybdd.screenplay.Task;
 public class SendAMail implements Task{
 
 	private List<WebElementFacade> tabs;
-	final String username = "username";
-    final String password = "******";
+	private final String username;
+    private final String password;
+    
+    public SendAMail(String username, String password) {
+    	this.username=username;
+    	this.password=password;
+    }
 	
 	@Override
 	public <T extends Actor> void performAs(T actor) {
@@ -47,7 +52,6 @@ public class SendAMail implements Task{
 		try {
 			FileUtils.copyFile(myScreenshot, new File(path));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -67,9 +71,9 @@ public class SendAMail implements Task{
 	    try {
 
 	        Message message = new MimeMessage(session);
-	        message.setFrom(new InternetAddress("user@gmail.com"));
+	        message.setFrom(new InternetAddress(username+"@gmail.com"));
 	        message.setRecipients(Message.RecipientType.TO,
-	                InternetAddress.parse("user@gmail.com"));
+	                InternetAddress.parse(username+"@gmail.com"));
 	        message.setSubject("Comprobante de pago");
 	        message.setText("PFA");
 
@@ -98,8 +102,8 @@ public class SendAMail implements Task{
 	    }
 	}
 
-	public static Performable the() {
-		return instrumented(SendAMail.class);
+	public static Performable the(String username, String password) {
+		return instrumented(SendAMail.class, username, password);
 	}
 
 }

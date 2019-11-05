@@ -6,7 +6,7 @@ Feature: Browse and buy on My Store page
   To buy a birthday dress
 
   Background: Sign in on website
-  	Given I navigate to My Store page and log in with my user
+  	Given I navigate to My Store page
   	When I sign in with the email and-rua@hotmail.com and the password 1234567
   	
   Scenario: Buy a birthday dress
@@ -14,10 +14,10 @@ Feature: Browse and buy on My Store page
     And Select the one with the HIGHEST_PRICE
     When I make the purchase with PAYBANK_WIRE
     Then I validate the outcomes
-    Then I send a mail with the proof of payment
+    Then I send a mail with the proof of payment user and password
 
   Scenario: Browse and search a birthday dress to buy
     When Search the highest price dress
     When I make the purchase with PAYBANK_WIRE
     Then I validate the outcomes
-    Then I send a mail with the proof of payment
+    Then I send a mail with the proof of payment user and password ##write user and password of gmail
